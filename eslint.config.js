@@ -19,9 +19,10 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off",
-      "no-unused-vars": "warn",
+      'react-refresh/only-export-components': [
+        'warn',
+        { allowConstantExport: true },
+      ],
     },
   },
 )
