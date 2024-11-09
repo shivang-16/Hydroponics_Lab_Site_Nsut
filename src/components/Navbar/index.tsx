@@ -2,19 +2,28 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaLeaf, FaBars, FaTimes } from 'react-icons/fa';
 
+// Add these type definitions at the top of the file
+type MenuItem = {
+  title: string;
+  path: string;
+  children?: MenuItem[];
+}
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  const menuItems = [
+  // Update the menuItems array type
+  const menuItems: MenuItem[] = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
     { title: 'Vision', path: '/vision' },
     { title: 'Mission', path: '/mission' },
     {
       title: 'Committees',
+      path: '/committees',
       children: [
         { title: 'Coordination Committee', path: '/coordinatoncomittee' },
         { title: 'Student Committee', path: '/studentcomittee' },
@@ -39,8 +48,10 @@ export const Navbar = () => {
     return location.pathname === path;
   };
 
-  const isActiveDropdown = (children: { path: string }[]) => {
-    return children.some(child => location.pathname === child.path);
+  // Update the isActiveDropdown function to handle optional children
+  const isActiveDropdown = (children: MenuItem[] | undefined): boolean => {
+    if (!children) return false;
+    return children.some(child => isActivePath(child.path));
   };
 
   return (
@@ -76,21 +87,17 @@ export const Navbar = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {activeDropdown === item.title && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
-                      {item.children.map((child, childIndex) => (
-                        <Link
-                          key={childIndex}
-                          to={child.path}
-                          className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-                            ${isActivePath(child.path) ? 'bg-gray-50 text-[#07370f] font-semibold' : ''}`}
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {child.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  {activeDropdown === item.title && item.children?.map((child, childIndex) => (
+                    <Link
+                      key={childIndex}
+                      to={child.path}
+                      className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
+                        ${isActivePath(child.path) ? 'bg-gray-50 text-[#07370f] font-semibold' : ''}`}
+                      onClick={() => setActiveDropdown(null)}
+                    >
+                      {child.title}
+                    </Link>
+                  ))}
                 </div>
               ) : (
                 <Link
@@ -136,7 +143,7 @@ export const Navbar = () => {
                     </button>
                     {activeDropdown === item.title && (
                       <div className="pl-4">
-                        {item.children.map((child, childIndex) => (
+                        {item.children?.map((child, childIndex) => (
                           <Link
                             key={childIndex}
                             to={child.path}

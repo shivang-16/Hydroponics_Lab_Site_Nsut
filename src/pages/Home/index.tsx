@@ -1,7 +1,6 @@
-import { FaLeaf, FaFlask, FaMicroscope, FaUsers, FaArrowRight, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt, FaRegBuilding, FaUserGraduate } from 'react-icons/fa';
-import { GiChemicalDrop, GiMicroscope, GiPlantRoots, GiSprout } from 'react-icons/gi';
-import { MdScience, MdBiotech, MdOutlineScience } from 'react-icons/md';
-import { RiPlantLine } from 'react-icons/ri';
+import { FaLeaf, FaFlask, FaMicroscope, FaUsers, FaArrowRight, FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import { GiPlantRoots, GiSprout } from 'react-icons/gi';
+import { MdBiotech, MdOutlineScience } from 'react-icons/md';
 import { ImageSlider } from '../../components/ImageSlider';
 import { useCountUp } from '../../hooks/useCountUp';
 import { Navbar } from '../../components/Navbar';
