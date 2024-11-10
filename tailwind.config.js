@@ -18,32 +18,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#07370f',
-          dark: '#052b0c',
-          light: '#0a4815'
-        }
+        primary: '#07370F',
       },
-      container: {
-        center: true,
-        padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem',
-        },
-        screens: {
-          sm: '640px',
-          md: '768px',
-          lg: '1024px',
-          xl: '1280px',
-          '2xl': '1536px',
-        },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       animation: {
-        'fade-in': 'fadeIn 2s ease-out forwards',
-        'slide-up': 'slideUp 1s ease-out forwards',
+        fadeIn: 'fadeIn 0.5s ease-in forwards',
+        slideUp: 'slideUp 0.5s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
