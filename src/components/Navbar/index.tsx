@@ -15,7 +15,7 @@ export const Navbar = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  // Update the menuItems array type
+  // Update the menuItems array with the exact same paths as in App.tsx
   const menuItems: MenuItem[] = [
     { title: 'Home', path: '/' },
     { title: 'About', path: '/about' },
@@ -25,8 +25,9 @@ export const Navbar = () => {
       title: 'Committees',
       path: '/committees',
       children: [
-        { title: 'Coordination Committee', path: '/coordinationcomittee' },
-        { title: 'Student Committee', path: '/studentcomittee' },
+        // Update these paths to match exactly with App.tsx routes
+        { title: 'Coordination Committee', path: '/coordinationcommittee' },
+        { title: 'Student Committee', path: '/studentcommittee' },
       ],
     },
     { title: 'Contact', path: '/contactus' },
@@ -75,29 +76,37 @@ export const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             {menuItems.map((item, index) => (
               'children' in item ? (
-                <div key={index} className="relative" ref={dropdownRef}>
+                <div key={index} className="relative group" ref={dropdownRef}>
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
-                    className={`text-gray-600 hover:text-[#07370f] px-3 py-2 rounded-md text-sm font-medium 
-                      inline-flex items-center ${isActiveDropdown(item.children) ? 'text-[#07370f] font-semibold' : ''}`}
+                    className={`w-full text-gray-600 hover:text-[#07370f] px-3 py-2 rounded-md text-sm font-medium 
+                      inline-flex items-center justify-center gap-2 ${isActiveDropdown(item.children) ? 'text-[#07370f] font-semibold' : ''}`}
                   >
-                    {item.title}
-                    <svg className={`ml-2 h-4 w-4 transition-transform ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="text-center">{item.title}</span>
+                    <svg 
+                      className={`h-4 w-4 transition-transform ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                     </svg>
                   </button>
-                  {activeDropdown === item.title && item.children?.map((child, childIndex) => (
-                    <Link
-                      key={childIndex}
-                      to={child.path}
-                      className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
-                        ${isActivePath(child.path) ? 'bg-gray-50 text-[#07370f] font-semibold' : ''}`}
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      {child.title}
-                    </Link>
-                  ))}
+                  {activeDropdown === item.title && (
+                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                      {item.children?.map((child, childIndex) => (
+                        <Link
+                          key={childIndex}
+                          to={child.path}
+                          className={`block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100
+                            ${isActivePath(child.path) ? 'bg-gray-50 text-[#07370f] font-semibold' : ''}`}
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {child.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Link
@@ -132,45 +141,57 @@ export const Navbar = () => {
                   <div key={index} className="space-y-1">
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === item.title ? null : item.title)}
-                      className={`w-full text-left px-3 py-2 text-base font-medium flex justify-between items-center
-                        ${isActiveDropdown(item.children) ? 'text-[#07370f] font-semibold' : 'text-gray-700'}`}
+                      className={`w-full px-3 py-2 text-base font-medium flex items-center justify-center gap-2
+                        ${isActiveDropdown(item.children) ? 'text-[#07300f] font-semibold' : 'text-gray-700'}`}
                     >
-                      {item.title}
-                      <svg className={`h-4 w-4 transition-transform ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
-                           fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <span className="flex-1 text-center">{item.title}</span>
+                      <svg 
+                        className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
                     {activeDropdown === item.title && (
-                      <div className="pl-4">
+                      <div className="pl-4 bg-gray-50 rounded-lg mt-1">
                         {item.children?.map((child, childIndex) => (
                           <Link
                             key={childIndex}
                             to={child.path}
-                            className={`block px-3 py-2 text-sm
+                            className={`block px-4 py-3 text-sm rounded-lg
                               ${isActivePath(child.path) 
-                                ? 'text-[#07370f] font-semibold bg-gray-50' 
-                                : 'text-gray-600 hover:text-[#07370f]'}`}
-                          onClick={() => {
-                            setIsOpen(false);
-                            setActiveDropdown(null);
-                          }}
-                        >
-                          {child.title}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                                ? 'text-[#07300f] font-semibold bg-[#07370f]/5' 
+                                : 'text-gray-600 hover:text-[#07370f] hover:bg-[#07370f]/5'}`}
+                            onClick={(e) => {
+                              e.preventDefault(); // Prevent default behavior
+                              setIsOpen(false);
+                              setActiveDropdown(null);
+                              // Use navigate instead of direct link
+                              window.location.href = child.path;
+                            }}
+                          >
+                            {child.title}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ) : (
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-3 py-2 text-base font-medium
+                    className={`block px-3 py-2 text-base font-medium rounded-lg
                       ${isActivePath(item.path)
-                        ? 'text-[#07370f] font-semibold bg-gray-50'
-                        : 'text-gray-700 hover:text-[#07370f]'}`}
-                    onClick={() => setIsOpen(false)}
+                        ? 'text-[#07370f] font-semibold bg-[#07370f]/5'
+                        : 'text-gray-700 hover:text-[#07370f] hover:bg-[#07370f]/5'}`}
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent default behavior
+                      setIsOpen(false);
+                      // Use window.location for navigation
+                      window.location.href = item.path;
+                    }}
                   >
                     {item.title}
                   </Link>
