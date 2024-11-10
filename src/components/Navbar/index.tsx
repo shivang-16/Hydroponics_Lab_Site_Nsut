@@ -25,7 +25,7 @@ export const Navbar = () => {
       title: 'Committees',
       path: '/committees',
       children: [
-        { title: 'Coordination Committee', path: '/coordinatoncomittee' },
+        { title: 'Coordination Committee', path: '/coordinationcomittee' },
         { title: 'Student Committee', path: '/studentcomittee' },
       ],
     },
