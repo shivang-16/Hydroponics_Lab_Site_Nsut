@@ -8,13 +8,14 @@ import { StudentComittee } from './pages/StudentComittee';
 import { Vision } from './pages/Vision';
 import { Mission } from './pages/Mission';
 import { Contact } from './pages/ContactUs';
+import { Navbar } from './components/Navbar';
 
 function App() {
 
   return (
     <Router>
       <div>
-
+      <Navbar />
         <Routes>
           
           <Route path="/" element={<Home/>} />
