@@ -3,7 +3,6 @@ import { GiPlantRoots, GiSprout } from 'react-icons/gi';
 import { MdBiotech, MdOutlineScience } from 'react-icons/md';
 import { ImageSlider } from '../../components/ImageSlider';
 import { useCountUp } from '../../hooks/useCountUp';
-import { Navbar } from '../../components/Navbar';
 
 export const Home = () => {
   const facilitiesCount = useCountUp({ end: 80 });
@@ -12,7 +11,7 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50 w-full">
       {/* Use the Navbar component instead of inline navigation */}
-      <Navbar />
+
 
       {/* Hero Section */}
       <div className="w-full pt-20">
