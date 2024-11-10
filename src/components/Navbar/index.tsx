@@ -144,7 +144,7 @@ export const Navbar = () => {
                       className={`w-full px-3 py-2 text-base font-medium flex items-center justify-center gap-2
                         ${isActiveDropdown(item.children) ? 'text-[#07300f] font-semibold' : 'text-gray-700'}`}
                     >
-                      <span className="flex-1 text-center">{item.title}</span>
+                      <span>{item.title}</span>
                       <svg 
                         className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.title ? 'rotate-180' : ''}`} 
                         fill="none" 
@@ -160,16 +160,13 @@ export const Navbar = () => {
                           <Link
                             key={childIndex}
                             to={child.path}
-                            className={`block px-4 py-3 text-sm rounded-lg
+                            className={`block w-full text-center px-4 py-3 text-sm rounded-lg
                               ${isActivePath(child.path) 
                                 ? 'text-[#07300f] font-semibold bg-[#07370f]/5' 
                                 : 'text-gray-600 hover:text-[#07370f] hover:bg-[#07370f]/5'}`}
-                            onClick={(e) => {
-                              e.preventDefault(); // Prevent default behavior
+                            onClick={() => {
                               setIsOpen(false);
                               setActiveDropdown(null);
-                              // Use navigate instead of direct link
-                              window.location.href = child.path;
                             }}
                           >
                             {child.title}
@@ -182,15 +179,12 @@ export const Navbar = () => {
                   <Link
                     key={index}
                     to={item.path}
-                    className={`block px-3 py-2 text-base font-medium rounded-lg
+                    className={`block w-full text-center px-3 py-2 text-base font-medium rounded-lg
                       ${isActivePath(item.path)
                         ? 'text-[#07370f] font-semibold bg-[#07370f]/5'
                         : 'text-gray-700 hover:text-[#07370f] hover:bg-[#07370f]/5'}`}
-                    onClick={(e) => {
-                      e.preventDefault(); // Prevent default behavior
+                    onClick={() => {
                       setIsOpen(false);
-                      // Use window.location for navigation
-                      window.location.href = item.path;
                     }}
                   >
                     {item.title}

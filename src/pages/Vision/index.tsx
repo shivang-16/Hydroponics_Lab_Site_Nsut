@@ -51,19 +51,19 @@ export const Vision = () => {
 
   return (
     <div className="min-h-screen w-full">
-      {/* Hero Section - Two Column Layout */}
-      <div className="relative h-screen w-full overflow-hidden flex items-center bg-[#07300f] pt-10">
-        <div className="relative z-10 w-full h-full flex flex-col md:flex-row">
-          {/* Left Column - Content */}
-          <div className="w-full md:w-1/2 h-full flex items-center relative px-8 md:px-16">
+      {/* Hero Section - Adjusted padding and spacing */}
+      <div className="relative min-h-screen w-full overflow-hidden flex items-center bg-[#07300f] pt-28 lg:pt-32">
+        <div className="relative z-10 w-full h-full flex flex-col-reverse md:flex-row">
+          {/* Left Column - Improved spacing and responsive text */}
+          <div className="w-full md:w-1/2 flex items-center relative px-4 md:px-8 lg:px-16 py-12 md:py-0">
             <div className="max-w-[700px] mx-auto md:mx-0">
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
-                className="mb-4"
+                className="mb-6 md:mb-4"
               >
-                <h3 className="text-green-300 text-xl md:text-2xl font-light tracking-[0.2em] uppercase">
+                <h3 className="text-green-300 text-lg md:text-xl lg:text-2xl font-light tracking-[0.2em] uppercase">
                   Welcome to NSUT Hydroponics Lab
                 </h3>
               </motion.div>
@@ -72,7 +72,7 @@ export const Vision = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
-                className="text-7xl md:text-8xl font-bold text-white tracking-tight leading-none mb-6
+                className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white tracking-tight leading-none mb-6
                   bg-gradient-to-r from-white via-green-100 to-white bg-clip-text text-transparent"
               >
                 VISION
@@ -82,7 +82,7 @@ export const Vision = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.6 }}
-                className="text-3xl md:text-5xl font-bold text-white/90 leading-tight mb-8"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white/90 leading-tight mb-6 md:mb-8"
               >
                 We believe in sustainable agriculture
               </motion.h2>
@@ -102,7 +102,7 @@ export const Vision = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
-                className="flex gap-6"
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6"
               >
                 <motion.button
                   whileHover={{
@@ -133,9 +133,9 @@ export const Vision = () => {
             </div>
           </div>
 
-          {/* Right Column - Image Slider */}
-          <div className="w-full md:w-1/2 h-full relative overflow-hidden flex items-center justify-center p-8">
-            <div className="relative w-full h-[90%] rounded-2xl overflow-hidden shadow-2xl">
+          {/* Right Column - Adjusted height for better mobile view */}
+          <div className="w-full md:w-1/2 h-[40vh] md:h-full relative overflow-hidden flex items-center justify-center p-4 md:p-8">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
               {sliderImages.map((img, index) => (
                 <motion.div
                   key={index}
@@ -186,10 +186,10 @@ export const Vision = () => {
         </div>
       </div>
 
-      {/* Vision Cards - Full Width */}
-      <div className="py-40 w-full bg-gradient-to-b from-white via-[#07300f]/5 to-white">
-        <div className="w-full px-8 max-w-[2400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+      {/* Vision Cards - Improved spacing and responsive layout */}
+      <div className="py-16 md:py-24 lg:py-40 w-full bg-gradient-to-b from-white via-[#07300f]/5 to-white">
+        <div className="w-full px-4 sm:px-6 md:px-8 max-w-[2400px] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-20">
             {[
               {
                 icon: <FaSeedling className="text-6xl" />,
@@ -216,14 +216,14 @@ export const Vision = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
                 whileHover={{ y: -10 }}
-                className="bg-white/90 backdrop-blur-lg p-12 rounded-3xl shadow-xl hover:shadow-2xl 
+                className="bg-white/90 backdrop-blur-lg p-6 sm:p-8 lg:p-12 rounded-3xl shadow-xl hover:shadow-2xl 
                   transition-all duration-500 border border-[#07300f]/10 flex flex-col items-center text-center"
               >
-                <div className="text-[#07300f] mb-8">{card.icon}</div>
-                <h3 className="text-2xl font-bold text-[#07300f] mb-6">
+                <div className="text-[#07300f] mb-6 lg:mb-8">{card.icon}</div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#07300f] mb-4 lg:mb-6">
                   {card.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-base lg:text-lg text-gray-600 leading-relaxed">
                   {card.description}
                 </p>
               </motion.div>
@@ -232,11 +232,11 @@ export const Vision = () => {
         </div>
       </div>
 
-      {/* Statistics Section - Full Width */}
-      <div className="relative py-48 overflow-hidden">
+      {/* Statistics Section - Improved responsive layout */}
+      <div className="relative py-16 md:py-24 lg:py-48 overflow-hidden">
         <div className="absolute inset-0 bg-[#07300f]" />
-        <div className="relative z-10 w-full px-8 max-w-[2400px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
+        <div className="relative z-10 w-full px-4 sm:px-6 md:px-8 max-w-[2400px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 lg:gap-20">
             {[
               {
                 icon: <IoStatsChart className="text-5xl mb-6" />,
@@ -268,33 +268,33 @@ export const Vision = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center text-white p-8"
+                className="text-center text-white p-4 sm:p-6 lg:p-8"
               >
                 {stat.icon}
-                <div className="text-5xl md:text-7xl font-bold mb-4">
+                <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-3 lg:mb-4">
                   {stat.number}
                 </div>
-                <div className="text-xl font-semibold mb-4">{stat.label}</div>
-                <p className="text-white/80 text-lg">{stat.description}</p>
+                <div className="text-lg sm:text-xl font-semibold mb-3 lg:mb-4">{stat.label}</div>
+                <p className="text-white/80 text-base lg:text-lg">{stat.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Get In Touch Section - Full Width */}
-      <div className="py-40 bg-gradient-to-b from-[#07300f]/5 to-transparent">
-        <div className="w-full px-8 max-w-[2400px] mx-auto">
+      {/* Get In Touch Section - Improved spacing */}
+      <div className="py-16 md:py-24 lg:py-40 bg-gradient-to-b from-[#07300f]/5 to-transparent">
+        <div className="w-full px-4 sm:px-6 md:px-8 max-w-[2400px] mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h2 className="text-6xl md:text-7xl font-bold text-[#07300f] mb-16 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-[#07300f] mb-6 md:mb-12 lg:mb-16 tracking-tight">
               Get In Touch
             </h2>
-            <p className="text-xl md:text-2xl text-gray-600 mb-20 leading-relaxed max-w-[1000px] mx-auto font-normal">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 md:mb-12 lg:mb-20 leading-relaxed max-w-[1000px] mx-auto font-normal px-4">
               We are continuously evolving and striving hard to better the
               system for our users. We would like to listen to your feedback and
               suggestions.
@@ -303,10 +303,10 @@ export const Vision = () => {
               href="/contactus"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-[#07300f] text-white px-12 py-4 rounded-lg
-                text-xl font-medium hover:bg-[#0a4015] transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center gap-2 bg-[#07300f] text-white px-8 sm:px-12 py-3 sm:py-4 rounded-lg
+                text-lg sm:text-xl font-medium hover:bg-[#0a4015] transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              Contact Us <BsArrowRightCircle className="text-2xl" />
+              Contact Us <BsArrowRightCircle className="text-xl sm:text-2xl" />
             </motion.a>
           </motion.div>
         </div>
