@@ -6,6 +6,10 @@ export const theme = {
     colors: {
       primary: '#07300f',
     },
+    fontFamily: {
+      'marcellus': ['Marcellus', 'serif'],
+      'questrial': ['Questrial', 'sans-serif'],
+    },
   },
 };
 export const plugins = [];
@@ -21,8 +25,8 @@ export default {
         primary: '#07370F',
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
+        'marcellus': ['Marcellus', 'serif'],
+        'questrial': ['Questrial', 'sans-serif'],
       },
       animation: {
         fadeIn: 'fadeIn 0.5s ease-in forwards',
