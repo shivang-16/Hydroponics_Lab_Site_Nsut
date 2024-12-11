@@ -10,7 +10,6 @@ type MenuItem = {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -27,7 +26,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setActiveDropdown(null);
+        setIsOpen(false);
       }
     };
 

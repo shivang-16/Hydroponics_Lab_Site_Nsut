@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGraduationCap, FaUsers, FaChalkboardTeacher, FaFlask } from "react-icons/fa";
-import { BsArrowRightCircle, BsStarFill } from "react-icons/bs";
+import { BsStarFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 export const Training = () => {
