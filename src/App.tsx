@@ -10,6 +10,8 @@ import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { Blog } from './pages/Blog';
 import { FAQ } from './pages/FAQ';
+import { Achievements } from './pages/Achievements';
+import { Training } from './pages/Training';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
             <Route path="/facilities" element={<Facilities />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/achievements" element={<Achievements />} />
+            <Route path="/training" element={<Training />} />
           </Routes>
         </div>
         <Footer />
