@@ -72,7 +72,7 @@ export const CoordinatonComittee: FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-inter">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-inter pt-20">
       <div className="bg-gradient-to-r from-primary/90 to-primary py-16 animate-fadeIn shadow-lg">
         <h1 className="text-4xl font-bold text-center font-montserrat mb-6 text-white">
           Coordination Committee
@@ -83,7 +83,7 @@ export const CoordinatonComittee: FC = () => {
       </div>
 
       <div className="max-w-5xl mx-auto py-20 px-4">
-        <div className="space-y-12">
+        <div className="grid grid-cols-1 gap-12">
           {committeeMembers.map((member, index) => (
             <div 
               key={index}
