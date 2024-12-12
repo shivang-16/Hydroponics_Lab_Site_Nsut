@@ -116,3 +116,39 @@ body {
   }
 }
 
+/* Hero section styles */
+.font-light {
+  font-weight: 300;
+}
+
+/* Navigation styles */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+/* Active nav link */
+.nav-link-active {
+  background-color: black;
+}
+
+/* Hero text animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+.font-dancing-script {
+  font-family: 'Dancing Script', cursive;
+}
