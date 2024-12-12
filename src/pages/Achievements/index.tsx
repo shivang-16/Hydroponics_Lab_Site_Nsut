@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import {
-  BsChevronLeft,
-  BsChevronRight,
+//   BsChevronLeft,
+//   BsChevronRight,
   BsArrowRightCircle,
-  BsArrowRight,
+//   BsArrowRight,
 } from "react-icons/bs";
 
 export const Achievements = () => {
