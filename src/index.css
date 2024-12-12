@@ -1,8 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -146,8 +145,6 @@ body {
 .animate-fadeInUp {
   animation: fadeInUp 1s ease-out forwards;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 .font-dancing-script {
   font-family: 'Dancing Script', cursive;

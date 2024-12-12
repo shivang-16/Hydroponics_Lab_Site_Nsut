@@ -392,7 +392,7 @@ export const Home: FC = () => {
           {/* Know More Button */}
           <div className="text-center">
             <Link
-              to="/trainings"
+              to="/training"
               className="inline-block bg-[#0A3622] text-white px-8 py-3 rounded hover:bg-[#0A3622]/90 transition-colors duration-300"
             >
               Know More
