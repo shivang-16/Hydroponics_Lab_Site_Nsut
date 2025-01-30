@@ -266,7 +266,7 @@ export const Home: FC = () => {
             </div>
 
             {/* Title and Button */}
-            <div className="md:w-1/4 text-right mt-12 md:mt-0">
+            <div className="md:w-1/4 text-middle mt-12 md:mt-0">
               <motion.h2
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
