@@ -83,7 +83,7 @@ export const Contact: FC = () => {
               <p>Hydroponic Project</p>
               <p>NSUT, Dwarka</p>
               <p>123-456-7890</p>
-              <p>www.coehydroponics.com</p>
+              <p>Coe.hydroponics@nsut.ac.in</p>
             </div>
             <div className="flex space-x-4">
               <a href="#" className="w-8 h-8 bg-black rounded-full flex items-center justify-center hover:bg-black/80 transition-colors">
