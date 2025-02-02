@@ -10,7 +10,7 @@ export const Blog: FC = () => {
       author: "MUSKAN RAGHAV",
       date: "Nov 17",
       readTime: "2 min read",
-      image: "/public/system19.png",
+      image: "/system19.png",
       views: 2,
       comments: 0
     },
@@ -20,7 +20,7 @@ export const Blog: FC = () => {
       author: "DR. RAJESH KUMAR",
       date: "Nov 15",
       readTime: "3 min read",
-      image: "/public/system20.png",
+      image: "/system20.png",
       views: 3,
       comments: 1
     },
@@ -30,7 +30,7 @@ export const Blog: FC = () => {
       author: "PRIYA SHARMA",
       date: "Nov 12",
       readTime: "4 min read",
-      image: "/public/system21.png",
+      image: "/system21.png",
       views: 4,
       comments: 2
     }
