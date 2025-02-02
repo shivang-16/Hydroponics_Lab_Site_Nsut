@@ -223,22 +223,22 @@ export const About: FC = () => {
               {
                 name: "Dr. Akhilesh Dubey",
                 role: "Principal Investigator",
-                image: "/public/system25.png"
+                image: "/system25.png"
               },
               {
                 name: "Prof. Sushma Nagpal",
                 role: "Co-Principal Investigator",
-                image: "/public/system26.png"
+                image: "/system26.png"
               },
               {
                 name: "Prof. Jyotsna Singh",
                 role: "Co-Principal Investigator",
-                image: "/public/system27.png"
+                image: "/system27.png"
               },
               {
                 name: "Dr. Akhilesh K. Dubey",
                 role: "Co-Principal Investigator",
-                image: "/public/system28.png"
+                image: "/system28.png"
               }
             ].map((member, index) => (
               <motion.div
@@ -266,17 +266,17 @@ export const About: FC = () => {
               {
                 name: "Dr. Nisha Kandhoul",
                 role: "Co-Principal Investigator",
-                image: "/public/system29.png"
+                image: "/system29.png"
               },
               {
                 name: "Dr. Gaurav Singal",
                 role: "Co-Principal Investigator",
-                image: "/public/system30.png"
+                image: "/system30.png"
               },
               {
                 name: "Dr. Jyoti Yadav",
                 role: "Co-Principal Investigator",
-                image: "/public/system31.png"
+                image: "/system31.png"
               }
             ].map((member, index) => (
               <motion.div
