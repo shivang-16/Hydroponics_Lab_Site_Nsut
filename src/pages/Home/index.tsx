@@ -420,31 +420,31 @@ export const Home: FC = () => {
             >
               {[
                 {
-                  src: "/public/system1.jpg",
+                  src: "/system1.jpg",
                   alt: "Outdoor Garden View",
                 },
                 {
-                  src: "/public/system2.jpg",
+                  src: "/system2.jpg",
                   alt: "Hydroponic Lettuce Plants",
                 },
                 {
-                  src: "/public/system3.jpg",
+                  src: "/system3.jpg",
                   alt: "Vertical Growing Setup",
                 },
                 {
-                  src: "/public/system4.jpg",
+                  src: "/system4.jpg",
                   alt: "Indoor Hydroponic Facility",
                 },
                 {
-                  src: "/public/system1.jpg",
+                  src: "/system1.jpg",
                   alt: "Growing Stations",
                 },
                 {
-                  src: "/public/system2.jpg",
+                  src: "/system2.jpg",
                   alt: "Hydroponic Flower",
                 },
                 {
-                  src: "/public/system3.jpg",
+                  src: "/system3.jpg",
                   alt: "Facility Interior",
                 }
               ].map((image, index) => (

@@ -14,13 +14,13 @@ export const News: FC = () => {
     {
       title: "Call for Interviews: TA and SSA Positions",
       description: "The Centre is excited to announce interview calls for the positions of Teaching Assistant (TA) and Senior Scientific Associate (SSA). These roles are pivotal in supporting our training programs, research projects, and community outreach initiatives. If you are passionate about hydroponics and sustainable agriculture, visit nsut.ac.in",
-      image: "/public/system56.avif",
+      image: "/system56.avif",
       link: "https://nsut.ac.in"
     },
     {
       title: "Inauguration of the Centre",
       description: "Our state-of-the-art facility was officially inaugurated, marking a new chapter in hydroponics research and training. Equipped with advanced systems and technology, we're ready to redefine modern agriculture.",
-      image: "/public/inauguration.avif",
+      image: "/inauguration.avif",
       link: "/news/inauguration"
     }
   ]

@@ -38,7 +38,7 @@ export const Facilities: FC = () => {
               className="relative h-[400px] lg:h-[500px]"
             >
               <img
-                src="/public/system6.png"
+                src="/system6.png"
                 alt="NFT Horizontal Beds"
                 className="w-full h-full object-cover rounded-lg shadow-xl"
               />
@@ -149,7 +149,7 @@ export const Facilities: FC = () => {
               className="relative h-[400px] lg:h-[500px] order-1 lg:order-2"
             >
               <img
-                src="/public/system7.png"
+                src="/system7.png"
                 alt="A-Frame Systems"
                 className="w-full h-full object-cover rounded-lg shadow-xl"
               />
@@ -170,7 +170,7 @@ export const Facilities: FC = () => {
               className="relative h-[400px] lg:h-[500px]"
             >
               <img
-                src="/public/system8.png"
+                src="/system8.png"
                 alt="Vertical Tower Systems"
                 className="w-full h-full object-cover rounded-lg shadow-xl"
               />
@@ -257,7 +257,7 @@ export const Facilities: FC = () => {
               className="relative h-[400px] lg:h-[500px]"
             >
               <img
-                src="/public/system9.png"
+                src="/system9.png"
                 alt="Germination Room"
                 className="w-full h-full object-cover rounded-lg shadow-xl"
               />
@@ -278,7 +278,7 @@ export const Facilities: FC = () => {
               className="relative h-[400px] lg:h-[500px]"
             >
               <img
-                src="/public/system10.png"
+                src="/system10.png"
                 alt="Hydroponic Classrooms"
                 className="w-full h-full object-cover rounded-lg shadow-xl"
               />
