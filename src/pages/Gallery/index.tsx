@@ -8,47 +8,47 @@ export const Gallery: FC = () => {
 
   const images = [
     {
-      src: "/public/system11.png",
+      src: "/system11.png",
       alt: "Plant Growth in Hydroponic System",
       category: "Plant Growth"
     },
     {
-      src: "/public/system12.jpg",
+      src: "/system12.jpg",
       alt: "Hydroponic Facility Interior",
       category: "Facility"
     },
     {
-      src: "/public/system13.png",
+      src: "/system13.png",
       alt: "Seedling Development",
       category: "Plant Growth"
     },
     {
-      src: "/public/system14.png",
+      src: "/system14.png",
       alt: "Hydroponic Setup",
       category: "Facility"
     },
     {
-      src: "/public/system15.png",
+      src: "/system15.png",
       alt: "Mature Plants",
       category: "Plant Growth"
     },
     {
-      src: "/public/system16.png",
+      src: "/system16.png",
       alt: "Seedling Tray",
       category: "Plant Growth"
     },
     {
-      src: "/public/system17.png",
+      src: "/system17.png",
       alt: "NFT System",
       category: "Facility"
     },
     {
-      src: "/public/system18.png",
+      src: "/system18.png",
       alt: "Plant Development",
       category: "Plant Growth"
     },
     {
-      src: "/public/system11.png",
+      src: "/system11.png",
       alt: "Research Area",
       category: "Facility"
     },
