@@ -105,21 +105,17 @@ export const Training = () => {
                 {/* Content Column */}
                 <div className="text-white w-full md:pr-16">
                   <div className="mb-4">
-                    <h2 className="text-2xl md:text-[28px] font-['Marcellus'] font-extrabold tracking-wide mb-0.5">
+                    <h2 className="text-2xl md:text-[28px] font-['Marcellus'] font-extrabold tracking-wide mb-0.5 text-center md:text-left">
                       {program.title}
                     </h2>
-                    <p className="text-base font-['Questrial'] text-white/90 mb-1">
+                    <p className="text-base font-['Questrial'] text-white/90 mb-1 text-center md:text-left">
                       {program.instructor} | {program.details}
                     </p>
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 justify-center md:justify-start">
                       {[...Array(5)].map((_, i) => (
-                        <BsStarFill
-                          key={i}
-                          className="text-yellow-400"
-                          size={14}
-                        />
+                      <BsStarFill key={i} className="text-yellow-400" size={14} />
                       ))}
-                    </div>
+                    </div>  
                   </div>
 
                   <div className="space-y-4">
@@ -153,7 +149,7 @@ export const Training = () => {
                 <div className="hidden md:block text-[40px] font-['Marcellus'] text-white">
                   {program.price}
                 </div>
-                <div className="md:hidden text-2xl font-['Marcellus'] text-white mb-4">
+                <div className="md:hidden text-2xl font-['Marcellus'] text-white mb-4 w-full text-center">
                   {program.price}
                 </div>
               </div>
