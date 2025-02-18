@@ -57,7 +57,7 @@ export const Training = () => {
       </div>
 
       {/* Hero Section with Lettuce Background */}
-      <div className="relative h-[600px]">
+      <div className="relative h-[400px] md:h-[600px]">
         <div className="absolute inset-0 -z-10">
           <img
             src="https://static.wixstatic.com/media/11062b_6a9ea93ab87a43bf9b7b0e23cb831954~mv2.jpg"
@@ -67,15 +67,12 @@ export const Training = () => {
         </div>
 
         {/* Green Box Overlay */}
-        <div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                      w-[900px] bg-[#003300] px-16 py-12"
-        >
-          <h1 className="text-5xl font-['Marcellus'] text-white mb-8 text-center tracking-wide">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[900px] bg-[#003300] px-4 py-8 md:px-16 md:py-12">
+          <h1 className="text-4xl md:text-5xl font-['Marcellus'] text-white mb-4 md:mb-8 text-center tracking-wide">
             Training Programs
           </h1>
 
-          <p className="text-base text-white leading-relaxed font-['Questrial'] text-center">
+          <p className="text-sm md:text-base text-white leading-relaxed font-['Questrial'] text-center">
             At the Centre of Excellence in Hydroponics, we offer diverse
             training programs to cater to all levels of interest and
             experience—from newcomers to seasoned practitioners. Each program is
@@ -84,31 +81,31 @@ export const Training = () => {
             practices.
           </p>
 
-          <p className="text-base text-white mt-4 font-['Questrial'] text-center">
+          <p className="text-sm md:text-base text-white mt-2 md:mt-4 font-['Questrial'] text-center">
             Explore our training options below:
           </p>
         </div>
       </div>
 
       {/* Programs Section */}
-      <div className="bg-[#003300] py-20">
-        <div className="container mx-auto px-40">
+      <div className="bg-[#003300] py-10 md:py-20">
+        <div className="container mx-auto px-4 md:px-40">
           {trainingPrograms.map((program, index) => (
             <div key={index} className="mb-8 last:mb-0">
-              <div className="grid grid-cols-[355px,1fr,auto] gap-16 items-start">
+              <div className="flex flex-col md:grid md:grid-cols-[355px,1fr,auto] gap-4 md:gap-16 items-start">
                 {/* Image Column */}
-                <div>
+                <div className="w-full md:w-[355px]">
                   <img
                     src={program.image}
                     alt={program.title}
-                    className="w-[355px] h-[364px] object-cover"
+                    className="w-full h-auto aspect-[4/3] md:w-[355px] md:h-[364px] object-cover"
                   />
                 </div>
 
                 {/* Content Column */}
-                <div className="text-white text-left pr-16">
+                <div className="text-white w-full md:pr-16">
                   <div className="mb-4">
-                    <h2 className="text-[28px] font-['Marcellus'] font-extrabold tracking-wide mb-0.5">
+                    <h2 className="text-2xl md:text-[28px] font-['Marcellus'] font-extrabold tracking-wide mb-0.5">
                       {program.title}
                     </h2>
                     <p className="text-base font-['Questrial'] text-white/90 mb-1">
@@ -144,9 +141,8 @@ export const Training = () => {
 
                     <Link
                       to="/apply"
-                      className="inline-block border border-white px-5 py-1.5
-                               hover:bg-white hover:text-[#003300] transition-colors duration-300
-                               font-['Questrial'] text-sm mt-2"
+                      className="inline-block border border-white px-5 py-1.5 hover:bg-white hover:text-[#003300]
+                               transition-colors duration-300 font-['Questrial'] text-sm mt-2"
                     >
                       Read More ›
                     </Link>
@@ -154,13 +150,16 @@ export const Training = () => {
                 </div>
 
                 {/* Price Column */}
-                <div className="text-[40px] font-['Marcellus'] text-white">
+                <div className="hidden md:block text-[40px] font-['Marcellus'] text-white">
+                  {program.price}
+                </div>
+                <div className="md:hidden text-2xl font-['Marcellus'] text-white mb-4">
                   {program.price}
                 </div>
               </div>
 
               {index !== trainingPrograms.length - 1 && (
-                <div className="grid grid-cols-[355px,1fr,auto] gap-16 mt-8">
+                <div className="md:grid md:grid-cols-[355px,1fr,auto] gap-16 mt-8">
                   <div className="col-span-full h-[2px] bg-white"></div>
                 </div>
               )}
@@ -170,13 +169,13 @@ export const Training = () => {
       </div>
 
       {/* Start Today Section */}
-      <div className="bg-[#e6ffe6] text-[#003300] py-20">
-        <div className="container mx-auto px-16 text-center">
+      <div className="bg-[#e6ffe6] text-[#003300] py-10 md:py-20">
+        <div className="container mx-auto px-4 md:px-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl font-['Marcellus'] mb-8"
+            className="text-3xl md:text-5xl font-['Marcellus'] mb-4 md:mb-8"
           >
             Start Today, Make an Impact Tomorrow
           </motion.h2>
@@ -186,7 +185,7 @@ export const Training = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-2xl font-['Questrial'] italic max-w-5xl mx-auto"
+            className="text-lg md:text-2xl font-['Questrial'] italic max-w-5xl mx-auto"
           >
             No matter your background, you can make a meaningful contribution to
             the future of agriculture. Begin your journey with us and become a
