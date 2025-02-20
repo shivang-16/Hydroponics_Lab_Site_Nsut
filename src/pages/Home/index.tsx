@@ -221,22 +221,22 @@ export const Home: FC = () => {
             <div className="flex-1 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
               {[
                 {
-                  image: "/hero-bg.avif",
+                  image: "/hero-bg.jpg",
                   title: "709 square metres area",
                   subtitle: "facility"
                 },
                 {
-                  image: "/polyhouse.avif",
+                  image: "/polyhouse.jpg",
                   title: "Polyhouse with 5",
                   subtitle: "hydroponics systems"
                 },
                 {
-                  image: "/germination.avif",
+                  image: "/germination.jpg",
                   title: "Dedicated Germination",
                   subtitle: "and Cold room"
                 },
                 {
-                  image: "/classroom.avif",
+                  image: "/classroom.jpg",
                   title: "Classroom for theoretical",
                   subtitle: "sessions"
                 }
